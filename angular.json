@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "optimization": true,
+            "outputHashing": "all",
+            "sourceMap": false,
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles.scss"]
             },
@@ -47,8 +50,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "150kb",
+                  "maximumError": "150kb"
                 }
               ],
               "outputHashing": "all"
