@@ -1,7 +1,5 @@
 @import "~font-awesome/css/font-awesome.css";
 
-$font-family: "Titillium Web", sans-serif;
-
 $font-color: #333333;
 $dark-gray: #828282;
 $light-gray: #f2f2f2;
@@ -37,7 +35,7 @@ p,
 b,
 h3,
 h4 {
-  font-family: $font-family;
+  font-family: "Sans Serif";
   margin: 0;
 }
 
