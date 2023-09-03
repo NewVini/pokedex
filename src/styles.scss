@@ -1,0 +1,67 @@
+@import "~font-awesome/css/font-awesome.css";
+
+$font-family: "Titillium Web", sans-serif;
+
+$font-color: #333333;
+$dark-gray: #828282;
+$light-gray: #f2f2f2;
+$red: #e2350d;
+$white: #ffffff;
+
+$fire: #ee7f33;
+$normal: #a9a778;
+$water: #6890f0;
+$grass: #78c84f;
+$ice: #98d8d7;
+$poison: #a040a1;
+$ground: #e0c069;
+$flying: #a790ef;
+$bug: #a8b821;
+$rock: #b6a037;
+$ghost: #705797;
+$dragon: #724ef9;
+$dark: #6f5848;
+$steel: #b8b8d0;
+$fairy: #f4c8e2;
+$psychic: #e95587;
+$electric: #f8cf32;
+$fighting: #c03228;
+
+$small: 8px;
+$medium: 16px;
+$large: 24px;
+$xlarge: 36px;
+
+h1,
+p,
+b,
+h3,
+h4 {
+  font-family: $font-family;
+  margin: 0;
+}
+
+.ml-sm {
+  margin-left: $small;
+}
+
+.mt-md {
+  margin-top: $medium;
+}
+.mt-lg {
+  margin-top: $xlarge;
+}
+
+.mt-xxl {
+  margin-top: 70px;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

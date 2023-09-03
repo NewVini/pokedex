@@ -1,0 +1,9 @@
+<div class="button-container">
+  <button
+    class="hvr-radial-out"
+    *ngFor="let type of types"
+    (click)="selectType(type)"
+  >
+    {{ type }}
+  </button>
+</div>

@@ -1,0 +1,7 @@
+<div class="custom-select">
+  <label for="">Odernar por:</label>
+  <select [(ngModel)]="selectedOption" (ngModelChange)="optionSelected()">
+    <option [value]="'asc'">Por Menor Número</option>
+    <option [value]="'desc'">Por Maior Número</option>
+  </select>
+</div>

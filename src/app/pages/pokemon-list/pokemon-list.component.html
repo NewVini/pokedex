@@ -1,0 +1,40 @@
+<div class="page-list mt-xxl">
+  <div class="container">
+    <div class="row mt-lg">
+      <app-filter
+        [(ngModel)]="filterText"
+        (filterTextChange)="updateFilterText($event)"
+        [placeholder]="placeholder"
+        name="filterText"
+      ></app-filter>
+      <app-select
+        [(selectedOption)]="selectedSortOption"
+        [options]="types"
+        (selectedOptionChange)="sortPokemons()"
+        name="selectedSortOption"
+      ></app-select>
+    </div>
+    <div class="row mt-lg">
+      <div class="btns-container">
+        <div class="filter-title-container">
+          <p>Filtrar por tipo</p>
+        </div>
+        <app-button
+          [types]="types"
+          (typeSelected)="filterByType($event)"
+        ></app-button>
+        <div class="filter-title-container mt-md">
+          <p>Filtrar por tipo</p>
+          <div class="switch-container">
+            <app-switch [(checked)]="showFavoritesOnly"></app-switch>
+          </div>
+        </div>
+      </div>
+      <div class="cards-container">
+        <div *ngFor="let pokemon of filterPokemons()">
+          <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

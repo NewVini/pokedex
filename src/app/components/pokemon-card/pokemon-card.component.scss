@@ -1,0 +1,101 @@
+@import "../../../styles.scss";
+
+.pokemon-card {
+  margin: $small;
+  margin-bottom: $xlarge;
+  position: relative;
+  cursor: pointer;
+  i.favorite {
+    position: absolute;
+    visibility: visible;
+    top: 8px;
+    color: red;
+    right: 6px;
+    transition: ease-in-out all 100ms;
+  }
+  i {
+    position: absolute;
+    visibility: hidden;
+    top: 8px;
+    color: red;
+    right: 0px;
+    transition: ease 500ms;
+  }
+  &:hover {
+    i {
+      position: absolute;
+      visibility: visible;
+      top: 8px;
+      color: red;
+      right: 14px;
+      transition: ease 400ms;
+    }
+  }
+  &.fade-up {
+    animation: fadeUp 1.5s ease-in-out;
+  }
+  p {
+    font-size: 10px;
+    color: $dark-gray;
+    font-weight: 300;
+    margin-top: 6px;
+  }
+  h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 6px 0px;
+    margin-bottom: 12px;
+  }
+  img {
+    width: 100%;
+    max-width: 120px;
+    background-color: $light-gray;
+    border-radius: $small;
+  }
+
+  .infos-container {
+    padding-left: $small;
+  }
+}
+$type-styles: (
+  fire: $fire,
+  normal: $normal,
+  water: $water,
+  grass: $grass,
+  ice: $ice,
+  poison: $poison,
+  ground: $ground,
+  flying: $flying,
+  bug: $bug,
+  rock: $rock,
+  ghost: $ghost,
+  dragon: $dragon,
+  dark: $dark,
+  steel: $steel,
+  fairy: $fairy,
+  psychic: $psychic,
+  electric: $electric,
+  fighting: $fighting,
+);
+@each $type, $color in $type-styles {
+  .type-#{$type} {
+    background-color: $color;
+    color: #ffffff;
+    font-weight: 300;
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+    padding: 4px 8px;
+    margin-right: 4px;
+  }
+  .type-grass {
+    background-color: $grass;
+    color: #000000;
+    font-weight: 300;
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+    padding: 4px 8px;
+    margin-right: 4px;
+  }
+}

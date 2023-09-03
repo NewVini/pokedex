@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #333;
+  color: white;
+  margin: 0;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 80px;
+  z-index: 9999;
+  background: linear-gradient(to bottom, red, #d30000);
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.flex-space {
+  flex: 1;
+}
+
+.logout-icon {
+  font-size: 24px;
+  cursor: pointer;
+}

@@ -1,0 +1,78 @@
+@import "../../../styles.scss";
+
+.page-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  .cards-container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    max-height: 800px;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+    &::-webkit-scrollbar {
+      width: 4px;
+      margin-top: 20px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f2f2f2;
+
+      height: 100%;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #ffffff48;
+      border-radius: $medium;
+      height: 200px;
+      background-color: $red;
+      transition: ease;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgb(212, 2, 2);
+      cursor: pointer;
+    }
+  }
+
+  .btns-container {
+    width: 20%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+
+.filter-title-container {
+  padding-left: $small;
+  padding-bottom: $small;
+  .switch-container {
+    padding-top: $small;
+  }
+  p {
+    font-size: 12px;
+    font-weight: 400;
+    color: $font-color;
+  }
+}
+
+.container {
+  max-width: 1800px;
+  margin: $large;
+  width: 100%;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}

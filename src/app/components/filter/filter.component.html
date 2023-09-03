@@ -1,0 +1,9 @@
+<div class="input-container">
+  <input
+    type="text"
+    [(ngModel)]="filterText"
+    (ngModelChange)="onFilterTextChange()"
+    [placeholder]="placeholder"
+  />
+  <i class="fa fa-search"></i>
+</div>

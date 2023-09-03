@@ -1,0 +1,23 @@
+<div
+  class="pokemon-card"
+  (click)="toggleFavorite(pokemon.name)"
+  [ngClass]="{ 'fade-up': true }"
+>
+  <img [src]="pokemon.sprites?.normal" alt="{{ pokemon.name }}" />
+  <div class="infos-container">
+    <p>N {{ pokemon.national_number }}</p>
+    <h3>{{ pokemon.name }}</h3>
+    <div class="types">
+      <span
+        *ngFor="let type of pokemon.type; let last = last"
+        [ngClass]="'type-' + type.toLowerCase()"
+      >
+        {{ type }}
+      </span>
+    </div>
+    <i
+      class="fa fa-heart"
+      [ngClass]="{ favorite: isFavorite(pokemon.name) }"
+    ></i>
+  </div>
+</div>
