@@ -60,9 +60,17 @@ export class PokemonListComponent implements OnInit {
 
   getPokemons(): void {
     this.pokemonService.getPokemons().subscribe((data) => {
-      this.pokemons = data.results;
+      this.pokemons = this.removeDuplicates(data.results, 'national_number');
     });
   }
+
+  removeDuplicates(array: any[], key: string): any[] {
+    return array.filter(
+      (item, index, self) =>
+        index === self.findIndex((i) => i[key] === item[key])
+    );
+  }
+
   filterByType(type: string): void {
     this.selectedType = type;
   }
